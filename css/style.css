@@ -25,7 +25,11 @@ body {
 }
 
 h1 {
-    font-size: 1.375rem;
+    font-size: 137, 5%;
+}
+
+.desktop-icon {
+    display: inline-block;
 }
 
 h2 {
@@ -125,7 +129,7 @@ header {
 .nav-links ul li a:before {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 6%;
     height: 0.20rem;
     background-color: transparent;
     bottom: 3.5rem;
@@ -177,7 +181,7 @@ input[type="text"]::placeholder {
 }
 
 /* Style du bouton de recherche */
-.SearchBarre button {
+.SearchBarre .button {
     border: none;
     color: white;
     font-weight: bold;
@@ -186,7 +190,14 @@ input[type="text"]::placeholder {
     padding: 0.9375rem 1.25rem;
     font-size: 1.125rem;
     margin-left: -4.225rem;
+}
 
+.icone-recherche {
+    display: none;
+}
+
+.texte-recherche {
+    display: inline;
 }
 
 /* Style de l'icône */
@@ -245,10 +256,10 @@ input[type="text"]::placeholder {
 /***** Info texte ******/
 .info {
     display: flex;
-    align-items: center;
-    gap: 0.625rem;
+    align-items: flex-start;
     align-self: stretch;
-    padding-top: 2.19rem;
+    font-size: 20px;
+    padding: 0 0 0;
 }
 
 
@@ -549,20 +560,23 @@ ul li a:hover {
 
 /* Media query pour l'affichage tablette (<=1024px) */
 
-.Marseiller {
-    order: 1;
-    /* Mettre Hébergements à Marseille en premier */
-}
 
-.populaires {
-    order: 2;
-}
-
-.activity-layout1 {
-    order: 3;
-}
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .populaires {
+        order: 1;
+    }
+
+    .OffersMainGauche {
+        order: 2;
+        /* Mettre Hébergements à Marseille en premier */
+    }
+
+    .activity-layout1 {
+        order: 3;
+    }
+
     .flex-container {
         display: flex;
         flex-direction: column;
@@ -705,50 +719,66 @@ ul li a:hover {
 }
 
 
-                                /* Mobile  */
+/* Mobile  */
+@media screen and (max-width: 768px) {
 
-@media screen and (max-width: 750px) {
 
-    body{
-        padding:0%;
-
+    .color {
+        background-color: #FFF;
+        padding: 0
     }
-    
+
+    .populaires {
+        order: 1;
+    }
+
+    .OffersMainGauche {
+        order: 2;
+    }
+
+    .activity-layout1 {
+        order: 3;
+    }
+
+    body {
+        margin: 15px 0 0;
+    }
+
     header {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        align-self: stretch;
+
     }
 
-          .logo {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: 100%;
-              padding-top: 2rem;
-          }
 
-    .nav-links {
+
+
+    .logo img {
         padding-top: 1rem;
-        display: flex;
-        justify-content: center;
+        width: 5rem;
     }
 
     .nav-links ul {
         list-style: none;
-        display: flex;
-        align-items: center;
-        margin-left: -40%;
+        color: #000;
+        font-size: 26.96px;
+        font-weight: 500;
+
     }
 
+
     .nav-links ul li {
-        position: relative;
+        margin-right: 3rem;
+
     }
 
     .nav-links ul li a {
         text-decoration: none;
         transition: color 0.3s ease;
+        display: flex;
+        align-items: flex-start;
     }
 
     .nav-links ul li a:hover {
@@ -757,56 +787,42 @@ ul li a:hover {
 
     }
 
-  .nav-links ul li a:before {
-      content: '';
-      position: absolute;
-      width: calc(32vw);
-      /* Largeur de la ligne ajustée en fonction de la largeur de la fenêtre du navigateur */
-      height: 0.20rem;
-      background-color: #ccc;
-      /* Couleur de la ligne */
-      bottom: -1rem;
-      /* Positionnée légèrement en dessous du texte du lien */
-      left: 0;
-      /* Alignée avec le bord gauche de la page */
-      transition: background-color 0.3s ease;
-      /* Animation de transition pour l'effet de survol */
-     
-  }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: '';
+        position: absolute;
+        width: calc(100% + 135px);
+        height: 0.14rem;
+        background-color: #F2F2F2;
+        bottom: -1.9rem;
+        left: -52px;
+        transition: background-color 0.3s ease;
+    }
 
-  .nav-links ul li a:hover:before {
-      background-color: var(--main-color);
-      /* Couleur de la ligne au survol */
-  }
+    .nav-links ul li a:hover:before {
+        background-color: var(--main-color);
+
+    }
 
     h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0%;
+        font-size: 22px;
+        word-wrap: break-word;
+        margin: 25px 0 0 15px;
     }
-p {
-font-size: 1.85rem;
-margin-top: 2%;
-}
+
+    .PaddingTop p {
+        font-size: 24.2px;
+        margin: 10px 0 0 15px;
+    }
+
     .BoxSizing {
         padding-top: 1rem;
         display: flex;
         align-items: center;
-        justify-content: center
+        justify-content: center;
     }
 
-    /* Barre de recherche */
-    .SearchBarre {
-        display: flex;
-        align-items: center;
-        width: 23.5625rem;
-        height: 3.0625rem;
-        border-radius: 0.9375rem;
-        border: 0.0625rem solid var(--Grey, #F2F2F2);
-        background: var(--White, #FFF);
-
-    }
-
-    /* Style de la zone de saisie du texte */
     .SearchBarre input[type="text"] {
         border: none;
         outline: none;
@@ -815,97 +831,49 @@ margin-top: 2%;
         color: var(--White, #000000);
         display: flex;
         align-items: center;
-        margin-left: 1rem;
-        margin-right: 1.4rem;
         justify-content: center;
     }
 
-    /* Placeholder */
     input[type="text"]::placeholder {
         font-weight: bold;
         color: var(--White, #060606);
     }
 
-    /* Style du bouton de recherche */
-    .SearchBarre button {
-        border: none;
-        color: #F2F2F2;
-        font-weight: bold;
-        background-color: var(--main-color);
-        border-radius: 0 0.9375rem 0.9375rem 0;
-        padding: 0.9375rem 1.25rem;
-        font-size: 1.125rem;
-        margin-left: -4.225rem;
-
-    }
-
-    /* Style de l'icône */
-    .icon {
-        width: 3.125rem;
-        height: 3.0625rem;
-        flex-shrink: 0;
-        background-color: var(--main-bg-color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 0.9375rem 0 0 0.9375rem;
-        font-family: Raleway;
-        font-size: 1.0625rem;
-        font-weight: 700;
-        line-height: normal;
-    }
-
-    /********* Filtres Bar ************/
-    .FiltresBar {
-        display: flex;
-        flex-wrap: wrap;
-        height: 3.125rem;
-        align-items: center;
-        gap: 0.94rem;
-        color: var(--Black, #000);
-        font-size: 1.0625rem;
-        font-weight: 700;
-        line-height: normal;
-    }
-
     .FiltreButton {
         display: flex;
-        height: 3.125rem;
-        padding: 0.25rem 1.1875rem;
+        padding: 19px;
         align-items: center;
-        gap: 0.625rem;
         border-radius: 1.5625rem;
         border: 0.125rem solid var(--Grey-Tint2, #D9D9D9);
         background-color: white;
         color: var(--Black, #000);
-        font-family: Raleway;
-        font-size: 1.0625rem;
+        font-size: 1.1rem;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-
-        
-
+        margin: 0 22px 0 0;
     }
 
-    .button:hover { 
+
+    .FiltreButton:hover {
         background-color: #DEEBFF;
-        /* Couleur de fond lorsque survolé */
     }
 
-    /***** Info texte ******/
     .info {
         display: flex;
         align-items: center;
         gap: 0.625rem;
         align-self: stretch;
-        padding-top: 2.19rem;
+        padding-top: 1.20rem;
+        margin-right: 9px;
+        margin-left: 15px;
+        padding-bottom: 1rem;
+        font-size: 23px;
     }
 
     .flex-container {
         display: flex;
         flex-direction: column;
-        margin: 0rem;
         justify-content: center;
         padding-top: 2.19rem;
         padding-bottom: 1rem;
@@ -913,7 +881,10 @@ margin-top: 2%;
 
     .OffersMainGauche {
         width: 100%;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFF;
     }
 
     .layout {
@@ -922,87 +893,95 @@ margin-top: 2%;
         flex-wrap: wrap;
         gap: 1rem;
         justify-content: center;
+    }
 
-
+    .OffersMainGauche .section-title {
+        font-size: 22px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 20PX 170PX 5px 0;
     }
 
     .card-image {
-        width: 13rem;
-        height: 9rem;
+        height: 160px;
+        width: 495px;
         border-radius: 1.25rem 1.25rem 0 0;
         border: 5px solid var(--White, #FFF);
         background: lightgray 50% / cover no-repeat;
-        object-fit: fill;
-
     }
 
-    /* Les plus populaires */
     .populaires-cards {
-        width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
-    }
-
-    .populaires-title3 {
-        width: 100%;
-        /* Utiliser 100% de la largeur disponible */
-        font-size: 22px;
+        flex-wrap: wrap;
     }
 
     .populaires {
-        width: 100%;
-        margin-top: 1.88rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-left: 0rem;
+        width: 101.1%;
+        height: 805px;
+        margin-left: 0;
+        border-radius: 0;
+    }
 
+    .populaires-title3 {
+        font-size: 19px
+    }
+
+    .card-title {
+        font-size: 19px;
+        margin: 3px 0 0 0
+    }
+
+    .populaires-cards .card .card-subtitle {
+        font-size: 17px;
+        margin: 10px 0 0 0
+    }
+
+    .card {
+        width: 90%;
+        height: 70%;
     }
 
 
+
     .populaires-cards img {
-        width: 5rem;
-        height: 10rem;
-        border-radius: 20px 0px 0px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        border-radius: 20px 0 0 20px;
+        height: 100%;
+        width: 29%;
 
     }
 
     .populaires-cards .card-content {
-        width: 6rem;
+        width: 14rem;
         height: 10rem;
         box-sizing: border-box;
+        box-sizing: content-box;
 
     }
 
     .populaires-cards a {
         display: flex;
         flex-wrap: wrap;
-        align-content: c;
-        width: 33%;
+        align-content: center;
         justify-content: center;
-
-
+        width: 508px;
+        height: 228px;
     }
 
-    .populaires-cards a .card {
-        margin: 0;
-        gap: 0;
-    }
-
-    /* Styles pour les activités à Marseille */
 
 
     .section-title1 {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        align-content: flex-start;
+        justify-content: flex-start;
+        margin: 0 0 40px 10px;
     }
 
     .activity-container1 {
-        padding-top: 0rem;
+        padding-top: 0;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -1016,25 +995,24 @@ margin-top: 2%;
     }
 
     .activity-layout1 {
-        display: flex;
-        flex-wrap: wrap;
         gap: 1.5rem;
-        border-radius: 0rem 0rem 1.25rem 1.25rem;
+        border-radius: 0 0 1.25rem 1.25rem;
         background: var(--White, #FFF);
         justify-content: center;
         flex-direction: column;
+        display: flex;
     }
 
     .activity-layout1 a {
-        width: 22.5%;
+        width: 100%;
     }
 
     .card-image1 {
         display: flex;
-        width: 100%;
-        height: 14rem;
-        border-radius: 20px 20px 0px 0px;
-        object-fit: fill;
+        width: 432px;
+        border-radius: 20px 20px 0 0;
+        height: 199px;
+        margin: 0;
     }
 
     .card-container1 {
@@ -1044,10 +1022,148 @@ margin-top: 2%;
 
     .card-txt1 {
         display: flex;
-        font-size: 1rem;
+        font-size: 19px;
         font-style: normal;
         line-height: normal;
         margin-left: 0.6rem;
     }
 
+
+    .SearchBarre .button {
+        height: 4rem;
+        width: 5rem;
+        border-radius: 0.9375rem;
+        background: var(--White, #FFF);
+        border: 1px solid var(--Blue, #0065FC);
+        background: var(--Blue, #0065FC);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin: 0 0 0 25px;
+    }
+
+    .BoxSizing {
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .SearchBarre {
+        display: flex;
+        align-items: center;
+        width: 31rem;
+        height: 4rem;
+        border-radius: 0.9375rem;
+        border: 0.0025rem solid var(--Grey, #F2F2F2);
+        background: var(--White, #FFF);
+        margin: 25px 0 15px 15px;
+    }
+
+    .SearchBarre input[type="text"] {
+        border: none;
+        outline: none;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: var(--White, #000000);
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .icon {
+        width: 4rem;
+        height: 4rem;
+        flex-shrink: 0;
+        background-color: var(--main-bg-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.9375rem 0 0 0.9375rem;
+        margin: 0 40px 0 0;
+    }
+
+    .icone-recherche {
+        display: inline;
+        /* Afficher l'icône uniquement en mode mobile */
+    }
+
+    .texte-recherche {
+        display: none;
+        /* Masquer le texte en mode mobile */
+    }
+
+    .FiltresBar {
+        display: flex;
+        flex-wrap: wrap;
+        height: 14rem;
+        align-items: center;
+        color: var(--Black, #000);
+        font-weight: 700;
+        line-height: normal;
+        gap: 0.010rem;
+    }
+
+    .FiltresBar .filtres {
+        padding-left: 20px;
+        font-size: 22px;
+        padding-bottom: 0;
+        margin-block-start: 0.1em;
+        margin-block-end: 0.1rem;
+        width: 100%;
+    }
+
+    .button {
+        height: 60px;
+        padding: 24px;
+        align-items: center;
+        flex: 1%;
+        border-radius: 40px;
+        /* flex-direction: row; */
+        align-content: flex-end;
+        margin: 20px 10px 6px 10Px;
+        justify-content: normal;
+    }
+
+    .SearchBarre .fa-solid {
+        font-size: 20px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    .populaires-cards .card .fa-solid {
+        font-size: 13px;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    .populaires-cards .card .svg {
+        width: 40px;
+        height: 40px;
+        fill: none;
+
+    }
+
+    .card-subtitle {
+        font-size: 14px;
+        margin: 5px 0 10px 0;
+    }
+
+    .footer {
+        background: var(--Grey, #F2F2F2);
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 1.25rem;
+        height: 23em;
+    }
+
+    main {
+        display: flex;
+        margin: 0px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+        align-self: stretch;
+    }
 }
