@@ -12,12 +12,11 @@
 
 .fa-solid {
     color: var(--main-color);
-
 }
 
 
 body {
-    padding: 0 10%;
+    padding: 0 3%;
     --main-bg-color: #F2F2F2;
     display: flex;
     justify-content: center;
@@ -27,11 +26,6 @@ body {
 h1 {
     font-size: 1.375rem;
 }
-
-h2 {
-    font-size: 1rem;
-}
-
 
 .main-container {
     width: 100%;
@@ -207,8 +201,8 @@ input[type="text"]::placeholder {
     line-height: normal;
 }
 
- /********* Filtres Bar ************/
-.FiltresBar {
+/********* Filtres Bar ************/
+.boxButton {
     display: flex;
     flex-wrap: wrap;
     height: 3.125rem;
@@ -252,16 +246,17 @@ input[type="text"]::placeholder {
     align-self: stretch;
     padding-top: 2.19rem;
 }
-.info .fa-solid{
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 27px;
-            height: 27px;
-            border: 1.5px solid rgb(186, 186, 186);
-            border-radius: 50%;
-            font-size: 16px;
-        }
+
+.info .fa-solid {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 27px;
+    height: 27px;
+    border: 1.5px solid rgb(186, 186, 186);
+    border-radius: 50%;
+    font-size: 16px;
+}
 
 /* flex-container Marseiller */
 
@@ -272,6 +267,7 @@ input[type="text"]::placeholder {
     align-items: flex-start;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    font-size: 27px;
 }
 
 .flex-container {
@@ -280,6 +276,7 @@ input[type="text"]::placeholder {
     padding-top: 2.19rem;
     padding-bottom: 1rem;
     width: 100%;
+    gap: 50px;
 }
 
 
@@ -288,15 +285,17 @@ input[type="text"]::placeholder {
     flex-direction: column;
     align-items: flex-start;
     border-radius: 0.9375rem;
-    background: var(--Grey, #F2F2F2)
+    background: var(--Grey, #F2F2F2);
+    height: 47rem;
 }
 
 .layout {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2.88rem;
     justify-content: center;
+    padding: 0 20px;
+    gap: 40px;
 }
 
 /* Styles pour les cartes individuelles */
@@ -312,9 +311,8 @@ input[type="text"]::placeholder {
 
 /* Styles pour l'image de la carte */
 .card-image {
-    width: 17rem;
+    width: 20rem;
     height: 9rem;
-
     border-radius: 1.25rem 1.25rem 0 0;
     border: 5px solid var(--White, #FFF);
     background: lightgray 50% / cover no-repeat;
@@ -326,16 +324,13 @@ input[type="text"]::placeholder {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
     align-self: stretch;
     padding-left: 20px;
-    height: 5rem;
 }
 
 /* Styles pour les titres et sous-titres de cartes */
 .card-title {
     font-size: 1rem;
-    /* Ajout de marge en bas */
     margin-bottom: -0.3rem;
     font-size: 16px;
 }
@@ -382,12 +377,10 @@ input[type="text"]::placeholder {
 
 .populaires {
     width: 31%;
-    height: 45rem;
+    height: 47rem;
     border-radius: 0.9375rem;
     background: var(--Grey, #F2F2F2);
     align-items: center;
-    margin-left: 2.50rem;
-
 }
 
 .populaires-cards .card {
@@ -397,8 +390,8 @@ input[type="text"]::placeholder {
 }
 
 .populaires-cards img {
-    width: 10rem;
-    height: 9.90rem;
+    width: 37%;
+    height: 9.9rem;
     border-radius: 20px 0 0 20px;
     border: 5px 0 5px;
 }
@@ -413,12 +406,16 @@ input[type="text"]::placeholder {
 }
 
 .card-title {
-    margin-top: 2px;
+    margin-top: 17px;
+    font-size: 20px;
+}
+
+.card-subtitle .euro {
     font-size: 16px;
 }
 
 .card-subtitle {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .card-rating {
@@ -426,21 +423,24 @@ input[type="text"]::placeholder {
 
 }
 
+h2 {
+    font-size: 20px;
+}
+
 /* Activités à Marseille */
 
 .activity-layout1 a {
     width: 21%;
-
 }
 
 .section-title1 {
     display: flex;
     flex-wrap: wrap;
-    font-size: 22px;
+    font-size: 25px;
     text-align: left;
     margin-top: 2.5rem;
     margin-bottom: 2rem;
-    margin-left: 2.5rem;
+    margin-left: 4rem;
 }
 
 .activity-container1 {
@@ -553,16 +553,76 @@ ul li a:hover {
 }
 
 
+@media (min-width: 1025px) and (max-width: 1247px) {
+
+    .main-container {
+        max-width: 100%;
+        min-width: auto;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .SearchBarre {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+    }
+
+    .layout {
+        gap: 1rem;
+        /* Réduisez l'espacement entre les cartes */
+    }
+
+    .StyleCard {
+        width: 80%;
+        /* Ajustez la largeur des cartes */
+        margin-bottom: 1rem;
+    }
+
+    .populaires {
+        width: 100%;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activity-layout1 {
+        gap: 1.5rem;
+        /* Ajustez l'espacement entre les éléments */
+    }
+
+    .card-image1 {
+        height: 18rem;
+    }
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /* Media query pour l'affichage tablette (<=1024px) */
 
 
-
 @media (min-width: 768px) and (max-width: 1024px) {
     .Marseiller {
         order: 1;
+        /* Mettre Hébergements à Marseille en premier */
     }
 
     .populaires {
@@ -577,6 +637,11 @@ ul li a:hover {
         display: none;
     }
 
+    .OffersMainGauche {
+        width: 100%;
+        height: 690px;
+    }
+
     .flex-container {
         display: flex;
         flex-direction: column;
@@ -586,79 +651,105 @@ ul li a:hover {
         padding-bottom: 1rem;
     }
 
-    .OffersMainGauche {
-        width: 100%;
 
-    }
 
     .layout {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 2rem;
         justify-content: center;
 
     }
 
     .card-image {
-        width: 13rem;
-        height: 9rem;
+        width: 96%;
+        height: 8rem;
         border-radius: 1.25rem 1.25rem 0 0;
         border: 5px solid var(--White, #FFF);
         background: lightgray 50% / cover no-repeat;
         object-fit: fill;
+    }
 
+    .card-title {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        padding-left: 20px;
+        width: 247px;
     }
 
     /* Les plus populaires */
+
+
+    .populaires {
+        width: 100%;
+        height: 15rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-bottom: 20px;
+    }
+
     .populaires-cards {
         width: 100%;
         display: flex;
+        flex-direction: row;
+        margin-left: 28px;
+        GAP: 2px;
     }
 
     .populaires-title3 {
         width: 100%;
-        /* Utiliser 100% de la largeur disponible */
         font-size: 22px;
     }
 
-    .populaires {
-        width: 100%;
-        height: 19rem;
-        margin-top: 1.88rem;
+    .populaires .section-title {
+        padding: unset;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        margin-left: 0rem;
+        align-items: flex-start;
+        padding-bottom: 1px;
+        margin-left: 30px;
+        font-size: 20px;
     }
 
+    .card-subtitle {
+        margin-bottom: 10px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .populaires .card-title {
+        font-size: 15px;
+        margin-top: 10px;
+    }
 
     .populaires-cards img {
         width: 5rem;
-        height: 10rem;
+        height: 9rem;
         border-radius: 20px 0px 0px 20px;
 
     }
 
     .populaires-cards .card-content {
-        width: 6rem;
-        height: 10rem;
+        width: 205px;
+        height: 9rem;
         box-sizing: border-box;
-
+        padding: 6px;
     }
 
-    .populaires-cards a {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        width: 33%;
-        justify-content: center;
-
+    .populaires-cards .card {
+        width: 90%;
+        margin: unset;
     }
 
-    .populaires-cards a .card {
-        border: solid white;
-    }
+
 
     /* Styles pour les activités à Marseille */
 
@@ -714,6 +805,7 @@ ul li a:hover {
         font-style: normal;
         line-height: normal;
         margin-left: 0.6rem;
+        height: 75px;
     }
 }
 
@@ -781,7 +873,7 @@ ul li a:hover {
     .nav-links ul li {
         margin-left: 0;
         position: relative;
-        width: 41.4vh;
+        width: 47.3vh;
         border-bottom: 2px solid gray;
         display: flex;
         justify-content: center;
@@ -823,6 +915,10 @@ ul li a:hover {
         justify-content: center;
         margin-left: 5px;
         color: white;
+        display: flex;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
     }
 
     .SearchBarre .button {
@@ -886,13 +982,6 @@ ul li a:hover {
         display: none;
     }
 
-    .SearchBarre .fa-solid {
-        font-size: 40px;
-        display: flex;
-        align-content: center;
-        justify-content: space-between;
-    }
-
     .SearchBarre .button {
         height: 6rem;
         width: 6rem;
@@ -943,33 +1032,51 @@ ul li a:hover {
 
     /* Section Filtre  */
 
-    .FiltresBar .filtres {
-        font-size: 40px;
-        margin-block-start: 0.1em;
-        margin-block-end: 0.1rem;
-        padding: 39px 254px 20px 1px;
+    .filtres {
+        font-size: 35px;
+        margin-left: 47px;
     }
 
-    .FiltresBar {
-        height: 20rem;
+    .FiltreButton {
+        display: flex;
+        height: 6.125rem;
+        padding: 2.25rem 1.1875rem;
+        gap: 16px;
+        border-radius: 3.5625rem;
+        border: 3px solid var(--Grey-Tint2, #D9D9D9);
+        background-color: white;
         color: var(--Black, #000);
-        gap: 41px 19px;
-        margin: 0 0 0 45px;
+        font-family: Raleway;
+        font-size: 2.0625rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 318px;
+        align-items: center;
+        justify-content: center;
     }
 
-    .SVG {
-        height: 42px;
-        width: 44px;
-        margin-right: 10px;
+    .boxButton {
+        display: flex;
+        flex-wrap: wrap;
+        height: 8.125rem;
+        align-items: center;
+        gap: 29.94px;
+        color: var(--Black, #000);
+        font-size: 1.0625rem;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 50px;
     }
 
-    .button {
-        height: 97px;
-        width: 330px;
-        padding: 24px;
-        border-radius: 45px;
-        font-size: 29px;
-        border: 0.3rem solid var(--Grey-Tint2, #D9D9D9);
+    .boxButton .fa-solid {
+        font-size: 40px;
+    }
+
+    .Familial {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 35px;
     }
 
     .BoxSizing {
@@ -989,9 +1096,15 @@ ul li a:hover {
         padding-bottom: 1rem;
     }
 
-    .info .infosvg {
-        width: 59px;
-        height: 46px;
+    .info .fa-solid {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+        height: 40px;
+        border: 2.5px solid rgb(222 222 222);
+        border-radius: 100%;
+        font-size: 23px;
     }
 
     /* Les plus populaires */
@@ -1016,7 +1129,9 @@ ul li a:hover {
 
     .populaires-title3 {
         font-size: 32px;
-        margin: -99px 50px 0 32px
+        margin: -99px 50px 0 32px;
+        height: 400px;
+        padding-bottom: 50px;
     }
 
     .populaires-cards {
@@ -1034,6 +1149,7 @@ ul li a:hover {
         font-size: 33px;
         margin: 8px 0 0 0;
     }
+
 
     .populaires-cards .card .card-subtitle {
         font-size: 29px;
@@ -1075,10 +1191,11 @@ ul li a:hover {
     /* SECTION HEBERGEMENT  */
 
     .OffersMainGauche {
-        width: 100%;
         display: flex;
         justify-content: center;
         background-color: #FFF;
+        height: 176rem;
+        width: 60%;
     }
 
     .StyleCard {
@@ -1088,7 +1205,7 @@ ul li a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 0 0 3px;
+        margin: 0 0 0 27px;
     }
 
 
@@ -1160,13 +1277,13 @@ ul li a:hover {
         display: flex;
         border-radius: 20px 20px 0 0;
         height: 277px;
-        width: 589px;
+        width: 645px;
     }
 
     .card-container1 {
         box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
         border-radius: 1.25rem;
-        width: 589px;
+        width: 645px;
         height: 388PX;
         margin-bottom: 5px;
 
