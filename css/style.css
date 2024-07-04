@@ -16,6 +16,7 @@
 
 
 body {
+    padding: 0 10%;
     --main-bg-color: #F2F2F2;
     display: flex;
     justify-content: center;
@@ -313,7 +314,7 @@ input[type="text"]::placeholder {
 
 /* Styles pour l'image de la carte */
 .card-image {
-    width: 221px;
+    width: 17rem;
     height: 9rem;
     border-radius: 1.25rem 1.25rem 0 0;
     border: 5px solid var(--White, #FFF);
@@ -562,71 +563,10 @@ ul li a:hover {
 }
 
 
-@media (max-width: 1440px) {
-
-    .main-container {
-        max-width: 100%;
-        min-width: auto;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .SearchBarre {
-        width: fit-content;
-        margin: 1rem 0;
-    }
-
-    .flex-container {
-        flex-direction: column;
-        align-items: center;
-        padding-top: 1rem;
-    }
-
-    .layout {
-        gap: 1rem;
-        /* Réduisez l'espacement entre les cartes */
-    }
-
-    .StyleCard {
-        width: 80%;
-        /* Ajustez la largeur des cartes */
-        margin-bottom: 1rem;
-    }
-
-    .populaires {
-        width: 100%;
-        height: auto;
-        margin: 1rem 0;
-    }
-
-    .populaires-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .activity-layout1 {
-        gap: 1.5rem;
-        /* Ajustez l'espacement entre les éléments */
-    }
-
-    .card-image1 {
-        height: 18rem;
-    }
-}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /* Media query pour l'affichage tablette (<=1024px) */
-
 
 @media (max-width: 1024px) {
     .Marseiller {
@@ -672,8 +612,8 @@ ul li a:hover {
     }
 
     .card-image {
-        width: 221px;
-        height: 8rem;
+        width: 13rem;
+        height: 9rem;
         border-radius: 1.25rem 1.25rem 0 0;
         border: 5px solid var(--White, #FFF);
         background: lightgray 50% / cover no-repeat;
@@ -753,9 +693,17 @@ ul li a:hover {
         padding: 6px;
     }
 
-    .populaires-cards .card {
-        width: 91%;
-        margin: unset;
+    .populaires-cards a {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 33%;
+        justify-content: center;
+
+    }
+
+    .populaires-cards a .card {
+        border: solid white;
     }
 
 
@@ -1213,8 +1161,6 @@ ul li a:hover {
         display: flex;
         justify-content: center;
         background-color: #FFF;
-        height: 176rem;
-        width: 87%;
     }
 
     .StyleCard {
